@@ -1,0 +1,213 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: auto;
+}
+
+#home p {
+  color: #6A9C89;
+}
+
+.home-text-h2 {
+  color: #16423C;
+}
+
+.showcase-area {
+  margin-top: 210px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #16423C;
+}
+
+/* Apply Poppins font family globally */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Media query for mobile max-width 500px */
+@media (max-width: 500px) {
+  .home-text-h2 {
+    font-size: 1.8rem;
+  }
+  .showcase-area {
+    height: 50vh;
+    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../../img/main-img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; /* Ensure column layout for all screen sizes */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text inside showcase-area */
+  }
+  .main-title {
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .mg {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .showcase-container {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+#home {
+  margin-bottom: 30px;
+}
+
+/* media table, deskop  min-width 500px */
+@media (min-width: 500px) {
+  /* Home section */
+  #home h2 {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .showcase-area {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../../img/main-img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .main-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .md {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .showcase-area {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+#home {
+  padding: 50px 0px;
+  background: #f5f5f7;
+}
+
+/* Flex container for home section */
+.home-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Paragraph styling for home section */
+#home p {
+  font-size: 1.6rem;
+  color: #6A9C89;
+  margin-top: 1.2rem;
+}
+
+#home .big {
+  font-size: 1.6rem;
+  color: #6A9C89;
+  font-weight: 600;
+}
+
+/* Home image container */
+.home-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  /* Added animation for home image on load */
+  transform: translateX(150%);
+  animation: home-img-animation 1s ease-in-out forwards;
+  width: 100%;
+  height: 40vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Keyframe for home image animation */
+@keyframes home-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+/* Home text styling with animation */
+.home-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translateX(-150%);
+  animation: home-text-animation 1s ease-in-out forwards;
+}
+
+/* Keyframe for home text animation */
+@keyframes home-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+/* Home image styling */
+.home-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  -o-object-position: right;
+     object-position: right;
+}
+
+/* ####### Container for larger screens ####### */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin-bottom: 7rem;
+}/*# sourceMappingURL=homepage.css.map */

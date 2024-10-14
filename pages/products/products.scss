@@ -1,0 +1,98 @@
+@import "../../partials/variables.scss";
+@import "../../partials/mixins.scss";
+
+// Use SCSS variables to set CSS custom properties (variables)
+
+*{
+    margin: 0;
+}
+.site-wrapper{
+    margin-bottom: 100px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #000000;
+    gap: 50px;
+
+    @media (width > 650px) {
+        flex-direction: row;
+        max-width: 555px;
+    }
+    @media (width >= 1200px) {
+        max-width: 1155px;
+    }
+
+}
+
+.product-card {
+    width: 251px;
+    background: #FFFFFF;
+    border: 0.5px solid black;
+    cursor: pointer;
+    transition: all 0.1s;
+    overflow: hidden;
+}
+.product-card:hover {
+    background: #eeeeee;
+}
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.img-wrapper {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+}
+.product-img{
+    height: 100%;
+    width: 100%;
+    transition: all 0.1s;
+}
+.card-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    padding: 15px;
+    
+}
+
+.price-buy-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    width: 55px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: $main-color-dark;
+    color: white;
+}
+
+button:hover{
+    background-color: $main-color;
+    transition: all 0.2s;
+}
+
+.text {
+    font-weight: 600;
+}
+
+.price {
+    font-weight: bold;
+    color: #666666de;
+
+}
+
+.main {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+
+}

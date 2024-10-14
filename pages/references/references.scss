@@ -1,0 +1,12 @@
+@import "../../partials/variables.scss";
+@import "../../partials/mixins.scss";
+
+// Use SCSS variables to set CSS custom properties (variables)
+:root {
+    --bg-color: #{$bg-color}; // Background color
+    --text-main: #{$text-main};
+    --text-secondary: #{$text-secondary}; // Text color
+    --main-color: #{$main-color}; // Main color
+    --main-color-dark: #{$main-color-dark};
+    --secondary-color: #{$secondary-color};
+}
