@@ -1,33 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="../../components/navbar.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="../../components/navbar.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Us - EcoSip</title>
+  </head>
+  <body>
     <header>
-        <a>
-            <img class="logo" src='/img/logo.svg' alt='ECOSIP' width="64" />
-            <span>ECOSIP</span>
-        </a>
-   
-        <ul class="navbar">
-            <li><a href="/pages/homepage/index.html" >Home</a></li>
-            <li><a href="/pages/products/products.html">Products</a></li>
-            <li><a href="/pages/about-us/about-us.html" >About&nbsp;Us</a></li>
-            <li><a class="active" href="/pages/contact/contact.html">Contact</a></li>
-            <li><a href="/pages/references/references.html">References</a></li>
-        </ul>
-        <div class="bx bx-menu" id="menu-icon"></div> 
+      <a>
+        <img class="logo" src="/img/logo.svg" alt="ECOSIP" width="64" />
+        <span>ECOSIP</span>
+      </a>
 
-    </header>   
-    <script src="../../script.js"></script>  
-</body>
+      <ul class="navbar" id="navbar-links"></ul>
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <main>
+      <!-- Bilden kommer högst upp -->
+      <section class="contact-header">
+        <img
+          src="../../img/building.png"
+          alt="EcoSip Office"
+          class="contact-image"
+        />
+      </section>
+
+      <div class="container">
+        <!-- Vänstra kolumnen: Formuläret -->
+        <section class="contact-form-section">
+          <h1 class="contact-title">Contact us</h1>
+          <form class="contact-form">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <fieldset>
+              <legend>Select a topic:</legend>
+
+              <label>
+                <input
+                  type="radio"
+                  name="subject"
+                  value="product-purchase"
+                  required
+                />
+                Purchase of product/service
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="subject"
+                  value="company-question"
+                  required
+                />
+                Questions about the company
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="subject"
+                  value="website-feedback"
+                  required
+                />
+                Website feedback
+              </label>
+            </fieldset>
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message"
+              required
+            ></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <!-- Högra kolumnen: Kontaktuppgifter -->
+        <section class="contact-right">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="bx bx-phone"></i>
+              <span>+44 20 7946 0123</span>
+            </div>
+            <div class="info-item">
+              <i class="bx bx-envelope"></i>
+              <span>contact@ecosip.co.uk</span>
+            </div>
+            <div class="info-item">
+              <i class="bx bx-map"></i>
+              <span>EcoSip Ltd, 123 Green Street, London, W1A 1AA, UK</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="../../script.js"></script>
+  </body>
 </html>

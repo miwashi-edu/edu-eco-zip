@@ -1,8 +1,48 @@
-:root {
-  --bg-color: #E9EFEC;
-  --text-main: rgba(0, 0, 0, 0);
-  --text-secondary: white;
-  --main-color: #6A9C89;
-  --main-color-dark: #16423C;
-  --secondary-color: #C4DAD2;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form label {
+  font-size: 16px;
+  color: var(--text-main);
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: var(--main-color-dark);
+}
+.contact-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  padding: 0;
+}
+.contact-form legend {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--text-main);
 }/*# sourceMappingURL=contact.css.map */

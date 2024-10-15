@@ -1,12 +1,143 @@
 @import "../../partials/variables.scss";
 @import "../../partials/mixins.scss";
 
-// Use SCSS variables to set CSS custom properties (variables)
-:root {
-    --bg-color: #{$bg-color}; // Background color
-    --text-main: #{$text-main};
-    --text-secondary: #{$text-secondary}; // Text color
-    --main-color: #{$main-color}; // Main color
-    --main-color-dark: #{$main-color-dark};
-    --secondary-color: #{$secondary-color};
+// Allmänt reset och standardinställningar
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primaryText;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+// Layout för container
+.container {
+  display: flex;
+  flex-direction: column; // Mobil först: stapla allt vertikalt
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row; // På större skärmar: två kolumner
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+// Kontaktformuläret - vänstra kolumnen
+.contact-form-section {
+  width: 100%; // Ta upp hela bredden på mobil
+  max-width: 600px; // Begränsa bredden för desktop
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  .contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    label {
+      font-size: 16px;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: $main-color-dark;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+// Högra kolumnen - Kontaktinformation
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        font-size: 24px;
+        color: $main-color-dark;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Anpassningar för desktop
+@media (min-width: 768px) {
+  .contact-form-section,
+  .contact-right {
+    flex: 1; // Låt båda sektionerna ta lika mycket plats
+  }
+
+  .contact-form-section {
+    margin-right: 20px; // Ge utrymme mellan kolumnerna
+  }
+
+  .contact-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+// Bilden ska vara högst upp
+.contact-header {
+  width: 100%;
+  text-align: center;
+
+  .contact-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
 }
