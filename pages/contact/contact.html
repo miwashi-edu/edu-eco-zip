@@ -45,6 +45,7 @@
           <form class="contact-form">
             <label for="name">Name:</label>
             <input
+              class="input-name-email"
               type="text"
               id="name"
               name="name"
@@ -54,6 +55,7 @@
 
             <label for="email">E-mail:</label>
             <input
+              class="input-name-email"
               type="email"
               id="email"
               name="email"
@@ -64,35 +66,35 @@
             <fieldset>
               <legend>Select a topic:</legend>
 
-              <label>
+              <div class="topic">
                 <input
                   type="radio"
                   name="subject"
                   value="product-purchase"
                   required
                 />
-                Purchase of product/service
-              </label>
+                <label> Purchase of product/service </label>
+              </div>
 
-              <label>
+              <div class="topic">
                 <input
                   type="radio"
                   name="subject"
                   value="company-question"
                   required
                 />
-                Questions about the company
-              </label>
+                <label> Questions about the company </label>
+              </div>
 
-              <label>
+              <div class="topic">
                 <input
                   type="radio"
                   name="subject"
                   value="website-feedback"
                   required
                 />
-                Website feedback
-              </label>
+                <label> Website feedback </label>
+              </div>
             </fieldset>
 
             <label for="message">Message:</label>
@@ -109,6 +111,11 @@
 
         <!-- Högra kolumnen: Kontaktuppgifter -->
         <section class="contact-right">
+          <img
+          src="../../img/building.png"
+          alt="EcoSip Office"
+          class="contact-image-desktop"
+        />
           <div class="contact-info">
             <div class="info-item">
               <i class="bx bx-phone"></i>

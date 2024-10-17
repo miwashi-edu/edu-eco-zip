@@ -12,12 +12,13 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../../css/homepage.css" />
+    <link rel="stylesheet" href="./homepage.css" />
     <link rel="stylesheet" href="../../components/navbar.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       rel="stylesheet"
     />
+    
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,35 +53,40 @@
       <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section class="home-section" id="showcase">
-      <article class="home-content">
-        <p class="highlight">Make fulfillment sustainable</p>
-        <p>Fulfillment creates excessive waste.</p>
-        <p>Join us in fixing it.</p>
-        <a id="showcase-link" class="button primary">GO ECOSIP &gt;&gt;</a>
-      </article>
-    </section>
-
-    <section class="home-section" id="cta">
-      <article class="home-content">
-        <p class="highlight">Ecosip</p>
-        <p class="slogan">
-          We've been making eco-friendly products for 22 years.
-        </p>
-        <p>
-          EcoSip offers reusable straws and accessories that help reduce
-          single-use plastics.
-        </p>
-        <p>
-          Choose from stainless steel, bamboo, or silicone and make sustainable
-          living easy.
-        </p>
-      </article>
-      <figure class="home-image">
-        <img src="../../img/home.png" alt="Home" />
-      </figure>
-    </section>
-
+    <div class="site-wrapper">
+      <section class="home-section" id="cta-section">
+        <article class="image-content">
+          <p class="highlight">Make fulfillment sustainable</p>
+          <p>Fulfillment creates excessive waste.</p>
+          <p>Join us in fixing it.</p>
+          <a href="../../pages/products/products.html" id="cta-link" class="button primary">GO ECOSIP &gt;&gt;</a>
+        </article>
+      </section>
+      
+      
+      <section class="home-section showcase" id="showcase">
+        <article class="home-content">
+          <p class="header">Ecosip</p>
+          <p class="slogan">
+            We've been making eco-friendly products for 22 years.
+          </p>
+          <p>
+            EcoSip offers reusable straws and accessories that help reduce
+            single-use plastics.
+          </p>
+          <p>
+            Choose from stainless steel, bamboo, or silicone and make sustainable
+            living easy.
+          </p>
+        </article>
+        <article>
+          
+        
+          <img class="image-two"  src="../../img/home.png" alt="Home" />
+        </article>
+      </section>
+    
+    </div>
     <script src="../../script.js"></script>
   </body>
 </html>

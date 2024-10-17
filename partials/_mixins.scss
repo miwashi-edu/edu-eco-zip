@@ -3,10 +3,16 @@
     list-style: none;
 }
 
-@mixin flexCenter{
+@mixin flexCenter {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  @mixin showcaseBg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   

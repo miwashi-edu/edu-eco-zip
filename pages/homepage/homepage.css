@@ -1,129 +1,100 @@
-body {
-  padding-top: 120px;
-  min-height: 100vh;
-  background: #E9EFEC;
-  color: rgba(0, 0, 0, 0);
-}
-
-#showcase-link {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  background-color: #16423C;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-#showcase-link:hover {
-  background-color: #6A9C89;
-}
-@media (max-width: 500px) {
-  #showcase-link {
-    width: 120px;
-    height: 40px;
-    font-size: 0.775rem;
-    text-align: center;
-    padding: 0.5rem 1rem;
-  }
-}
-@media (min-width: 501px) {
-  #showcase-link {
-    width: 200px;
-    height: 50px;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-  }
-}
-
-.home-section {
-  background-color: #E9EFEC;
-  padding: 2rem;
+.site-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
-.home-section.home-content {
-  font-family: "Roboto", sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.home-section.home-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: white;
-}
-.home-section.home-content p.highlight {
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: #16423C;
-  margin-bottom: 1rem;
-}
-.home-section.home-content p.slogan {
-  font-size: 1.5rem;
-  color: #16423C;
-  margin: 1rem 0;
-}
-.home-section.home-content .button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  background-color: #6A9C89;
-  color: #C4DAD2;
-  text-decoration: none;
-  border: none;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.home-section.home-content .button.primary:hover {
-  background-color: #16423C;
-}
-.home-section .home-image {
-  max-height: 500px;
-  overflow: hidden;
+
+section {
+  padding: 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
   justify-content: center;
 }
-.home-section .home-image img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+
+article {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-@media (min-width: 501px) {
-  .home-section .home-image {
-    width: 540px;
-    height: 400px;
-  }
-  .home-section .home-image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
+section.showcase {
+  color: #000;
 }
-.home-section#showcase {
-  background-image: url("../../img/main-img.png");
+section#cta-section {
+  background-image: url(../../img/main-img.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 2.5rem;
 }
 
-#cta .home-content p {
-  color: #16423C;
+#showcase {
+  display: flex;
+  flex-direction: column;
 }
-#cta .home-content p.highlight {
-  font-size: 1.75rem;
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-section.showcase p {
+  text-align: left;
+}
+
+.home-section.showcase p.highlight {
+  text-align: center;
+}
+
+.home-section.showcase p.header {
+  text-align: center;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+p.header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+}
+p.highlight {
+  font-weight: 600;
+  font-size: 20px;
+}
+p.slogan {
+  padding: 16px;
   font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 24px;
 }
-#cta .home-content p.slogan {
-  font-size: 1.5rem;
-  margin: 1rem 0;
+
+.image-two {
+  width: 200px;
+}
+
+body {
+  padding-top: 120px;
+  min-height: 150vh;
+}
+
+a#cta-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  width: 170px;
+  margin-top: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+a#cta-link.primary:hover {
+  background-color: #6A9C89;
 }/*# sourceMappingURL=homepage.css.map */

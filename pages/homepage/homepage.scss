@@ -1,10 +1,103 @@
-@import "./mobile.scss"; 
-@import "./desktop.scss"; 
-@import "./tablet.scss";
+@import "../../partials/variables.scss";
+@import "../../partials/mixins.scss";
+
+
+
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+
+
+  
+  &.showcase {
+      color: $text-main;
+  }
+  &#cta-section{
+      background-image: url(../../img/main-img.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding:2.5rem;
+  }
+}
+
+#showcase{
+  display: flex;
+  flex-direction: column;
+}
+.image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-section.showcase p {
+  text-align: left;
+}
+.home-section.showcase p.highlight {
+  text-align: center;
+} 
+
+.home-section.showcase p.header {
+  text-align: center;
+} 
+
+p {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: $font-body;
+  font-size: 16px;
+  
+  &.header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+  }
+  &.highlight {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  &.slogan {
+    padding: 16px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+.image-two {
+  width: 200px;
+}
 
 body {
-  padding-top: $header-height; // Push everything below the fixed header
-  min-height: 100vh;
-  background: $bg-color;
-  color: $text-main;
+  padding-top: $header-height;
+  min-height: 150vh;
+}
+
+a#cta-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  width: 170px;
+  margin-top: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &.primary:hover {
+    background-color: $main-color;
+  }
 }

@@ -3,10 +3,18 @@ $font-body: 'Roboto', sans-serif;// För brödtext (med Roboto)
 $font-alt: 'Lato', sans-serif;// Alternativ brödtext eller specifika delar (med Lato)
 
 $bg-color: #E9EFEC; // Background color
-$text-main: #0000;   // Text color
+$text-main: #000;   // Text color
 $text-secondary: #ffff; // Text color
 $main-color: #6A9C89; // Main color
 $main-color-dark: #16423C; // Main color dark
 $secondary-color: #C4DAD2; // Secondary color
 
 $header-height: 120px;
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// custom 
+$breakpoint-mobile-small: 320px;
+$breakpoint-pcwide: 1400px;

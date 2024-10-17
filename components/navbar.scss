@@ -3,6 +3,10 @@
 
 
 /* Use SCSS variables to set CSS custom properties (variables) */
+.navbar.open {
+    display: flex;
+    
+}
 
 * {
     padding: 0;
@@ -52,19 +56,19 @@ header {
 .navbar {
     display: flex; 
     list-style: none; 
+    gap: 40px;
     
 }
 
-.navbar li {
-    margin: 0 15px;
-}
+
+
 
 .navbar a {
     color: $text-secondary;
     font-size: 1.1rem;
     font-weight: 600;
     padding: 5px 0;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ;
 
     
 }
@@ -90,89 +94,68 @@ header {
 }
 
 
-
 #menu-icon {
     font-size: 40px;
     color: $text-secondary;
     cursor: pointer;
     z-index: 10001;
     display: block;
+    transition: all 0.2s;
 }
+
 // Styling for when the hamburger menu is open (X icon)
 #menu-icon.open {
-    transform: rotate(90deg); // Rotate icon when menu is opened
+    transform: rotate(90deg);
 }
 /* ##### Responsive Styles for Mobile Devices ##### */
 /*Small smartphones [325px -> 425px]*/
 
-@media (width < 601px) {
 
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;  
-        width: 180px;
-        background: $main-color;
-        flex-direction: column;
-        border-radius: 10px;
-    }
-    .navbar.open {
-        right: 0;  
-    }
-    .navbar a {
-        margin: 12px 0;
-        padding: 0px 25px;
-    }
 
-    .navbar a:hover {
-        color: $text-secondary;
-        transform: translateX(5px);
-    }
 
-    .navbar a {
-        color: $text-secondary;
-    }
-
-    .navbar.open {
-        right: 0;  // 'open' class is added, the navigation menu appears on the screen.
-    }
-}
 
 /*Big smartphones [426px -> 600px]*/
 
 
  /*Tablets [601px -> 1200px]*/
- @media ( 601px <= width <= 1200px) {
+ @media ( width <= 1200px) {
     #menu-icon {
         display: block;  
     }
     .navbar {
+        display: none;
         position: absolute;
-        top: 100%;
-        // right: 2%;
-        right:-100%;
-        width: 270px;
-        height: 30vh;
-        background: $bg-color;
-        display: flex;
+        top: 120px;
+        right: 0;
+        width: 290px;
+        height: 352.5px;
+        background: #C4DAD2;
         flex-direction: column;
-        justify-content: center;
         border-radius: 10px;
+        gap: 0;
+        
     }
-    .navbar a {
-        margin: 12px 0;
-        padding: 0px 25px;
+    .navbar li {
+        padding: 20px 0;
     }
     .navbar a:hover {
         color: $text-secondary;
         transform: translateX(5px);
     }
+    
     .navbar a.active {
-        color: $text-secondary;
+        font-weight: 700;
+        border: 0px 0px 0px 7px solid $main-color;
+        color: $main-color-dark;
+        border-left: solid $main-color-dark 9px;
     }
-    .navbar.open {
-        right: 0;  // 'open' class is added, the navigation menu appears on the screen.
+    .navbar a {
+        color: #434343;
+        padding: 20px 150px 20px 20px;
+        width: 290px;
     }
+    
+
 }
 
 /* big desktop max-width:1280px */
@@ -182,11 +165,8 @@ header {
     }
   
     header{
-        padding: 14px 2%;
+        padding: 14px 150px;
     }
-    .navbar a{
-        padding: 20px 0;
-        margin: 0px 20px ;
-    }
+
     
 }

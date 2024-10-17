@@ -9,29 +9,48 @@
 }
 
 body {
+  padding-top: 120px;
   font-family: $primaryText;
   background-color: var(--bg-color);
-  color: var(--text-main);
+  @media (min-width: 768px){
+    padding-top: 0px;
+  }
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 768px) {
+    min-height: 100vh;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     }
+  }
 
 // Layout för container
 .container {
   display: flex;
   flex-direction: column; // Mobil först: stapla allt vertikalt
+  justify-content: center;
   align-items: center;
-  padding: 20px;
   gap: 20px;
+  color: black;  
 
   @media (min-width: 768px) {
     flex-direction: row; // På större skärmar: två kolumner
     justify-content: space-between;
-    align-items: flex-start;
+    gap: 100px;
   }
 }
 
 // Kontaktformuläret - vänstra kolumnen
 .contact-form-section {
-  width: 100%; // Ta upp hela bredden på mobil
+  width: 320px; 
   max-width: 600px; // Begränsa bredden för desktop
   background-color: #fff;
   padding: 20px;
@@ -49,19 +68,33 @@ body {
     flex-direction: column;
     gap: 15px;
 
+    .input-name-email {
+      padding: 10px;
+      border: solid 1px black;
+    }
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 5px;
+      border: none;
+
+      .topic {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
     label {
       font-size: 16px;
     }
 
-    input,
     textarea {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
       width: 100%;
-    }
-
-    textarea {
       min-height: 120px;
     }
 
@@ -89,10 +122,16 @@ body {
   text-align: center;
   gap: 20px;
 
+  .contact-image-desktop {
+    display: none;
+    width: 400px;
+  }
+
   .contact-info {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 320px;
 
     .info-item {
       display: flex;
@@ -113,6 +152,10 @@ body {
 
 // Anpassningar för desktop
 @media (min-width: 768px) {
+  .contact-image {
+    display: none;
+  }
+
   .contact-form-section,
   .contact-right {
     flex: 1; // Låt båda sektionerna ta lika mycket plats
@@ -120,18 +163,24 @@ body {
 
   .contact-form-section {
     margin-right: 20px; // Ge utrymme mellan kolumnerna
+    width: 400px;
   }
 
   .contact-right {
+    .contact-image-desktop {
+      display: block;
+      width: 600px;
+    }
     align-items: flex-start;
     text-align: left;
   }
 }
 
-// Bilden ska vara högst upp
+// Bilden ska vara högst upp - Mobile
 .contact-header {
   width: 100%;
   text-align: center;
+  margin-top: 0px;
 
   .contact-image {
     width: 100%;
